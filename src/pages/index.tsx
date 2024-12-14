@@ -1,27 +1,22 @@
-import CatCard from '@/components/cards/cat/CatCard';
-import { mockCatCardProps } from '@/components/cards/cat/CatCard.mocks';
-import PageTransition from '@/components/layouts/pageTransition/PageTransition';
-import PrimaryLayout from '@/components/layouts/primary/PrimaryLayout';
-import SidebarLayout from '@/components/layouts/sidebar/SidebarLayout';
-import { NextPageWithLayout } from './page';
+import Segment from '@/components/common/Segment/Segment.tsx';
+import Header from '@/components/header/header.tsx';
+export const metadata = {
+  title: '具体页面标题',
+  description: '具体页面描述',
+};
 
-const Home: NextPageWithLayout = () => {
+const props = {
+  data: {
+    headImageUrl: 'aaa',
+  },
+};
+
+const Home = () => {
   return (
-    <section>
-      <h1>
-        Welcome to <a href="https://nextjs.org">Next.js!</a>
-      </h1>
-      <CatCard {...mockCatCardProps.base} />
-    </section>
+    <>
+      <Header {...props} />
+      <Segment></Segment>
+    </>
   );
 };
 export default Home;
-
-Home.getLayout = (page) => {
-  return (
-    <PrimaryLayout>
-      <SidebarLayout />
-      <PageTransition>{page}</PageTransition>
-    </PrimaryLayout>
-  );
-};

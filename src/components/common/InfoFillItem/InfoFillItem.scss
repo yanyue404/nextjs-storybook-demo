@@ -1,0 +1,50 @@
+.info-fill-item {
+  padding-top: 30px;
+  padding-bottom: 10px;
+  .title {
+    height: 36px;
+    padding: 0 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // margin-bottom: 10px;
+  }
+  //标题主文本
+  @mixin title-main-text {
+    height: 36px;
+    line-height: 36px;
+    font-size: 34px;
+    font-weight: 600;
+    color: #333;
+    font-family: PingFangSC, PingFangSC-Medium;
+  }
+  // 带序号标题
+  .title-wrapper-sort {
+    display: flex;
+    align-items: center;
+    @include title-main-text;
+    small {
+      font-size: 28px;
+      font-weight: 500;
+      color: #909090;
+      margin-left: 10px;
+    }
+    .icon-suffix {
+      width: 36px;
+      height: 36px;
+      background: #ff6600;
+      border-radius: 18px;
+      font-size: 28px;
+      line-height: 36px;
+      text-align: center;
+      font-weight: 500;
+      color: #ffffff;
+      margin-right: 10px;
+    }
+    p {
+      height: 36px;
+      line-height: 36px;
+    }
+  }
+}

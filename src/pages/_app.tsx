@@ -1,7 +1,11 @@
-import { AnimatePresence } from 'framer-motion';
 import type { AppProps } from 'next/app';
-import './globals.css';
+import './globals.scss';
+
 import { NextPageWithLayout } from './page';
+export const metadata = {
+  title: '具体页面标题',
+  description: '具体页面描述',
+};
 
 interface AppPropsWithLayout extends AppProps {
   Component: NextPageWithLayout;
@@ -12,11 +16,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   const getLayout = Component.getLayout || ((page) => page);
 
-  return getLayout(
-    <AnimatePresence initial={false} mode="popLayout">
-      <Component {...pageProps} />
-    </AnimatePresence>
-  );
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;

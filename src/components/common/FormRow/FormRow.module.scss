@@ -1,0 +1,38 @@
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90px;
+  border-bottom: 1px solid #e7e7e7;
+  font-size: 28px;
+  padding-right: 30px;
+  margin: 0 0.3rem;
+  &.round {
+    width: 600px;
+    margin: 40px auto 0;
+    border-radius: 10px;
+    border: 2px solid #cccccc;
+    label {
+      padding-left: 0.3rem;
+    }
+    label:not(.form-input):after {
+      position: absolute;
+      content: "";
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      width: 0.02rem;
+      height: 0.3rem;
+      background-color: #ccc;
+    }
+  }
+  &.noborder {
+    border: none;
+  }
+  label {
+    position: relative;
+    width: 1.4rem;
+    color: #333;
+  }
+}

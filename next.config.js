@@ -2,9 +2,22 @@
 // https://nextjs.org/docs/app/api-reference/next-config-js
 const nextConfig = {
   reactStrictMode: true,
-  images: {
-    unoptimized: true,
-    domains: ['i.pravatar.cc'],
+  async headers() {
+    return [
+      {
+        source: '/',
+        headers: [
+          {
+            key: 'x-custom-header',
+            value: 'my custom header value',
+          },
+          {
+            key: 'x-another-custom-header',
+            value: 'my other custom header value',
+          },
+        ],
+      },
+    ];
   },
 };
 

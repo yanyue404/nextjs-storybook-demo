@@ -1,0 +1,22 @@
+.adm-tabs {
+  --active-title-color: rgb(16, 183, 127) !important;
+  --active-line-color: rgb(16, 183, 127) !important;
+}
+.tabsContainer {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  background: #fff;
+}
+
+.content {
+  padding: 0 24px 32px;
+  h2 {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 40px 0;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 50px;
+  }
+}
