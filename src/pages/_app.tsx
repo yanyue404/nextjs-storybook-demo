@@ -1,5 +1,7 @@
 import type { AppProps } from 'next/app';
 import './globals.scss';
+// 导入 antd-mobile 样式
+import 'antd-mobile/es/global';
 
 import { NextPageWithLayout } from './page';
 export const metadata = {

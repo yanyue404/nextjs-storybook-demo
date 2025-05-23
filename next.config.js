@@ -2,6 +2,7 @@
 // https://nextjs.org/docs/app/api-reference/next-config-js
 const nextConfig = {
   reactStrictMode: true,
+  transpilePackages: ['antd-mobile'],
   async headers() {
     return [
       {

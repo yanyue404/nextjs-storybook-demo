@@ -2,8 +2,6 @@ module.exports = {
   plugins: {
     'postcss-pxtorem': {
       rootValue({ file }) {
-        console.log('file', file);
-
         if (file.indexOf('sprite') !== -1) {
           return 100;
         }

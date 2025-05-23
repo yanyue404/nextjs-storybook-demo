@@ -1,16 +1,13 @@
 import HeadImg from '@/assets/images/head1.png';
 import Head2Img from '@/assets/images/head2.png';
-import Banner from '@/components/common/Banner/banner.tsx';
-import FormInput from '@/components/common/FormInput/FormInput.tsx';
-import FormRow from '@/components/common/FormRow/FormRow.tsx';
+import Banner from '@/components/common/Banner/banner';
+import FormInput from '@/components/common/FormInput/FormInput';
+import FormRow from '@/components/common/FormRow/FormRow';
 import Image from 'next/image';
 import { memo, useRef } from 'react';
 import styles from './header.module.scss';
 
 export default memo(function Header() {
-  console.log('header render.');
-  console.log('styles', styles);
-
   const data = [
     {
       src: HeadImg,

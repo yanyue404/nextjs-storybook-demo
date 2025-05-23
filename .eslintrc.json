@@ -1,4 +1,4 @@
-{
+{ 
   "extends": [
     "plugin:storybook/recommended", // 新加入
     "next", 
